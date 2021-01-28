@@ -1,5 +1,5 @@
 {
-  "name": "eMAPI",
+  "name": "emapi",
   "license": "MIT",
   "version": "1.0.0",
   "description": "Electron app which hosts electron-gqlmapi with GraphiQL",
