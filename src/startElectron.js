@@ -1,8 +1,6 @@
 // Modules to control application life and create native browser window
-import { app, BrowserWindow } from "electron";
-import startGraphQL from "electron-gqlmapi/lib/start";
-
-startGraphQL();
+const { app, BrowserWindow } = require("electron");
+const { startGraphQL, preloadPath } = require("electron-gqlmapi");
 
 const path = require("path");
 const isDev = require("electron-is-dev");
@@ -13,7 +11,6 @@ let mainWindow;
 
 function createWindow() {
   // Create the browser window.
-  const preloadPath = path.join(app.getAppPath(), "./node_modules/electron-gqlmapi/lib/preload.js");
   const targetUrl = isDev
     ? "http://localhost:3000/"
     : path.join(app.getAppPath(), "./build/index.html");
@@ -67,3 +64,5 @@ app.on("activate", function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+startGraphQL();
