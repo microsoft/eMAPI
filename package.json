@@ -1,7 +1,7 @@
 {
   "name": "emapi",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Electron app which hosts electron-gqlmapi with GraphiQL",
   "main": "./src/startElectron.js",
   "homepage": "./",
