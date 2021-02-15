@@ -74,6 +74,16 @@ function fetchQuery(params) {
       });
     },
 
+    onError: (message) => {
+      observable.subscriptions.forEach((subscription) => {
+        if (typeof subscription.observer === "object") {
+          subscription.observer.error(message);
+        }
+      });
+      observable.subscriptions = [];
+      observable.onUnsubscribe();
+    },
+
     onComplete: () => {
       observable.subscriptions.forEach((subscription) => {
         if (typeof subscription.observer === "object") {
@@ -99,6 +109,8 @@ function fetchQuery(params) {
       (payload) => observable.onNext(payload),
       () => observable.onComplete()
     );
+  }).catch((message) => {
+    observable.onError(message);
   });
 
   return observable;
