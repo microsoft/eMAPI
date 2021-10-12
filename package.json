@@ -36,7 +36,7 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "electron": "~11.2.0",
+    "electron": "~11.5.0",
     "electron-gqlmapi": "github:microsoft/electron-gqlmapi"
   },
   "devDependencies": {
