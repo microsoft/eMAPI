@@ -37,7 +37,7 @@
   ],
   "dependencies": {
     "electron": "~11.5.0",
-    "electron-gqlmapi": "microsoft/electron-gqlmapi#8c4b672c6c6814f1152fa6515c300e25ec505605"
+    "electron-gqlmapi": "microsoft/electron-gqlmapi#37371d0b606a66db6e24fdaa572e80325dd83f06"
   },
   "devDependencies": {
     "concurrently": "~5.3.0",
