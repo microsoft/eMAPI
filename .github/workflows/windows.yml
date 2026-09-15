@@ -32,7 +32,7 @@ jobs:
         $vcpkgToolchain = Join-Path '.\vcpkg' '.\scripts\buildsystems\vcpkg.cmake' -Resolve
 
         "npm_config_cmake_CMAKE_TOOLCHAIN_FILE=$vcpkgToolchain" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
-        "npm_config_disturl=https://electronjs.org/headers" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+        "ELECTRON_MIRROR=https://artifacts.electronjs.org/headers/dist" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
 
     - name: Build
       run: npm install
